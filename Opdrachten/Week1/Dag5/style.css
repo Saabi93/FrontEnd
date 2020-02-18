@@ -1,0 +1,67 @@
+*   {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: grey;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* Weergave in midden verticaal */ 
+    padding-right: 300px;
+    padding-left: 0px;
+}
+
+ul {
+    list-style: none; /* Removing bullet points */
+}
+
+.menu-ctn > li:hover {
+    cursor: pointer;
+    background-color: burlywood;
+}
+
+.menu-ctn img {
+    width: 10%; 
+}
+
+.menu-ctn  li ul {
+    /* display: inline-block;  Horizontale weergave */
+    background-color: rgb(199, 195, 195);
+    padding: 10px 15px; /* Top-bottom/ Left-right */
+    transition: all 0.8s ease ; /* vertraagde weergave van kleurverandering */
+    position: absolute;
+    width: 100%;
+    top: 100%;
+}
+
+.menu-ctn  li ul li {
+    background-color: rgb(140, 223, 124);
+    padding: 10px 15px; /* Top-bottom/ Left-right */
+    transition: all 0.8s ease ; /* vertraagde weergave van kleurverandering */
+    text-align: center;
+    width: 100%;
+    
+}
+
+
+
+#dropdown {
+     display: none;
+     position: absolute;
+     width: 100%;
+     background-color: red;
+     z-index: 1;
+     text-align: center;
+     left: 0;
+     top: 100%;
+}
+#dropdown li {
+    padding: 10px 15px;
+}
+
+#dropdown.active {
+    display: block; /* display is going to show */
+}
+

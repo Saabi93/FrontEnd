@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>W1D4-2 Practice Event Handlers</title>
+		<style> 
+			.blue-background {
+				background-color: blue; 
+}
+			.red-background {
+				background-color: red; 
+}
+		</style> 
+</head>
+
+<body id="body" class="blue-background">
+	<button id="mybutton" type="button" class="btn-alert">Alert Me!</button>
+	<button id="change-background-button" type="button" class="blue-background">Change Background</button>
+</body>
+<script type="text/javascript">
+	//Button alert on click
+	const buttonAlert = document.getElementById("mybutton");
+		buttonAlert.addEventListener("click", function(){
+  		alert("Button clicked");
+	});
+
+	//toggleColor
+	const toggleClassColorBackground = function() {
+      	const bodyElement = document.body;
+      	bodyElement.classList.toggle("red-background");
+	};
+	
+	//attachEventToChangeColorButton
+    const attachEventToChangeColorButton = function() {
+      	const changeColorButton = document.getElementById("change-background-button");
+	  	changeColorButton.addEventListener("click", function() {toggleClassColorBackground();
+		});
+	};
+	//attachEventToAlertButton
+    const attachEventToAlertButton = function() {
+      	const buttonAlert = document.getElementById("mybutton");
+      	buttonAlert.addEventListener("click", function() {
+        alert("Button clicked");
+      });
+    };
+
+	document.addEventListener('DOMContentLoaded', function(buttonAlert) {
+	//Event took place
+		attachEventToChangeColorButton();
+	  	attachEventToAlertButton();
+    });
+
+
+
+</script>
+</html>
